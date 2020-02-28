@@ -1,4 +1,8 @@
 
+/**
+ * @author Shivam Patel
+ * @author Kevin Shah
+ */
 public class Outstate extends Student {
     private boolean tristate;
 
@@ -9,39 +13,35 @@ public class Outstate extends Student {
 
     @Override
     public String toString() {
-        return super.toString() + " " + tristate;
+        return super.toString() + " " + "$" + this.tuitionDue();
     }
 
     @Override
     public int tuitionDue() {
-        int UniversityFee = 0;
-        int costPerTuition = 756;
-        int storage = 0;
+        int tuition = 0;
 
         if (this.credit < 12) {
-            UniversityFee = 846;
             if (this.tristate == true) {
-                storage = this.credit * (costPerTuition - 200) + UniversityFee;
+                tuition = this.credit * (Student.Outstate_PerCost) + Student.UniversityFee_PartTime;
             } else if (this.tristate == false) {
-                storage = (costPerTuition * this.credit) + UniversityFee;
+                tuition = (Student.Outstate_PerCost * this.credit) + Student.UniversityFee_PartTime;
             }
         } else if (this.credit >= 12) {
-            UniversityFee = 1441;
             if (this.credit >= 15) {
                 if (this.tristate == true) {
-                    storage = 15 * (costPerTuition - 200) + UniversityFee;
+                    tuition = 15 * (Student.Outstate_PerCost - 200) + Student.UniversityFee_FullTime;
                 } else if (this.tristate == false) {
-                    storage = (costPerTuition * 15) + UniversityFee;
+                    tuition = (Student.Outstate_PerCost * 15) + Student.UniversityFee_FullTime;
                 }
             } else {
                 if (this.tristate == true) {
-                    storage = this.credit * (costPerTuition - 200) + UniversityFee;
+                    tuition = this.credit * (Student.Outstate_PerCost - 200) + Student.UniversityFee_FullTime;
                 } else if (this.tristate == false) {
-                    storage = (costPerTuition * this.credit) + UniversityFee;
+                    tuition = (Student.Outstate_PerCost * this.credit) + Student.UniversityFee_FullTime;
                 }
             }
         }
-        return storage;
+        return tuition;
 
     }
 
