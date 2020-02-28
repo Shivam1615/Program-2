@@ -1,3 +1,7 @@
+/**
+ * @author Shivam Patel
+ * @author Kevin Shah
+ */
 public class International extends Student {
     private boolean exchange;
 
@@ -8,40 +12,38 @@ public class International extends Student {
 
     @Override
     public String toString() {
-        return super.toString() + " " + this.exchange;
+        return super.toString() + " " + "$" + this.tuitionDue();
     }
 
     @Override
     public int tuitionDue() {
-        int UniversityFee = 0;
-        int costPerTuition = 945;
-        int storage = 0;
-        int International_Fee = 350;
+        int tuition = 0;
 
         if (this.credit < 12) {
-            UniversityFee = 846;
             if (this.exchange == true) {
-                storage = UniversityFee + International_Fee;
+                tuition = Student.UniversityFee_PartTime + Student.International_Student_Fee;
             } else if (this.exchange == false) {
-                storage = (costPerTuition * this.credit) + UniversityFee + International_Fee;
+                tuition = (Student.International_PerCost * this.credit) + Student.UniversityFee_PartTime
+                        + Student.International_Student_Fee;
             }
         } else if (this.credit >= 12) {
-            UniversityFee = 1441;
             if (this.credit >= 15) {
                 if (this.exchange == true) {
-                    storage = UniversityFee + International_Fee;
+                    tuition = Student.UniversityFee_FullTime + Student.International_Student_Fee;
                 } else if (this.exchange == false) {
-                    storage = (costPerTuition * 15) + UniversityFee + International_Fee;
+                    tuition = (Student.International_PerCost * 15) + Student.UniversityFee_FullTime
+                            + Student.International_Student_Fee;
                 }
             } else {
                 if (this.exchange == true) {
-                    storage = UniversityFee + International_Fee;
+                    tuition = Student.UniversityFee_FullTime + Student.International_Student_Fee;
                 } else if (this.exchange == false) {
-                    storage = (costPerTuition * this.credit) + UniversityFee + International_Fee;
+                    tuition = (Student.International_PerCost * this.credit) + Student.UniversityFee_FullTime
+                            + Student.International_Student_Fee;
                 }
             }
         }
-        return storage;
+        return tuition;
 
     }
 
