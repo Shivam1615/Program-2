@@ -1,8 +1,19 @@
 
+/**
+ * @author Shivam Patel
+ * @author Kevin Shah
+ */
 public abstract class Student implements Comparable {
 	private String fname;
 	private String lname;
 	protected int credit;
+
+	public static final int Instate_PerCost = 433;
+	public static final int Outstate_PerCost = 756;
+	public static final int International_PerCost = 945;
+	public static final int UniversityFee_PartTime = 846;
+	public static final int UniversityFee_FullTime = 1441;
+	public static final int International_Student_Fee = 350;
 
 	public Student(String fname, String lname, int credit) { // constructor
 		this.fname = fname.toLowerCase();
