@@ -1,3 +1,7 @@
+/**
+ * @author Shivam Patel
+ * @author Kevin Shah
+ */
 public class Instate extends Student {
     private int funds;
 
@@ -8,29 +12,25 @@ public class Instate extends Student {
 
     @Override
     public String toString() {
-        return super.toString() + " " + this.funds;
+        return super.toString() + " " + "$" + this.tuitionDue();
     }
 
     @Override
     public int tuitionDue() {
-        int costPerCredit = 433;
-        int UniversityFee = 0;
-        int storage = 0;
+        int tuition = 0;
 
         // Part-time students
         if (this.credit < 12) {
-            UniversityFee = 846;
-            storage = (costPerCredit * this.credit) + UniversityFee;
+            tuition = (Student.Instate_PerCost * this.credit) + Student.UniversityFee_PartTime;
         } else if (this.credit >= 12) { // Full-time students
-            UniversityFee = 1441;
             if (this.credit >= 15) {
-                storage = (costPerCredit * 15) + UniversityFee - this.funds;
+                tuition = (Student.Instate_PerCost * 15) + Student.UniversityFee_FullTime - this.funds;
             } else {
-                storage = (costPerCredit * this.credit) + UniversityFee - this.funds;
+                tuition = (Student.Instate_PerCost * this.credit) + Student.UniversityFee_FullTime - this.funds;
             }
         }
 
-        return storage;
+        return tuition;
     }
 
     public static void main(String[] args) {
