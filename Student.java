@@ -30,17 +30,21 @@ public abstract class Student implements Comparable {
 	// compare fname
 	// and lname; names are not case-sensitive
 	public int compareTo(Object obj) {
-		Student student = (Student) obj;
-		if (this.fname.equals(student.fname) && this.lname.equals(student.lname)) {
-			return 0;
-		}
+		if(obj isinstanceof Student){
+			Student student = (Student) obj;
+			if (this.fname.equals(student.fname) && this.lname.equals(student.lname)) {
+				return 0;
+			}
 
-		if (this.fname.compareToIgnoreCase(student.fname) < 0 && this.lname.compareToIgnoreCase(student.lname) < 0) {
-			return -1;
-		}
+			if (this.fname.compareToIgnoreCase(student.fname) < 0 
+			    && this.lname.compareToIgnoreCase(student.lname) < 0) {
+				return -1;
+			}
 
-		if (this.fname.compareToIgnoreCase(student.fname) > 0 && this.lname.compareToIgnoreCase(student.lname) > 0) {
-			return 1;
+			if (this.fname.compareToIgnoreCase(student.fname) > 0 
+			    && this.lname.compareToIgnoreCase(student.lname) > 0) {
+				return 1;
+			}
 		}
 
 		return -1;
