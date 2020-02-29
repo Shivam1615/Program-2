@@ -3,7 +3,7 @@
  * @author Shivam Patel
  * @author Kevin Shah
  */
-public abstract class Student implements Comparable {
+public abstract class Student implements Comparable<Object> {
 	private String fname;
 	private String lname;
 	protected int credit;
@@ -16,8 +16,8 @@ public abstract class Student implements Comparable {
 	public static final int International_Student_Fee = 350;
 
 	public Student(String fname, String lname, int credit) { // constructor
-		this.fname = fname.toLowerCase();
-		this.lname = lname.toLowerCase();
+		this.fname = fname;
+		this.lname = lname;
 		this.credit = credit;
 	}
 
@@ -31,7 +31,7 @@ public abstract class Student implements Comparable {
 	// and lname; names are not case-sensitive
 	public int compareTo(Object obj) {
 		Student student = (Student) obj;
-		if (this.fname.equals(student.fname) && this.lname.equals(student.lname)) {
+		if (this.fname.equalsIgnoreCase(student.fname) && this.lname.equalsIgnoreCase(student.lname)) {
 			return 0;
 		}
 

@@ -13,7 +13,7 @@ public class Outstate extends Student {
 
     @Override
     public String toString() {
-        return super.toString() + " " + "$" + this.tuitionDue();
+        return super.toString() + " tuition due: " + "$" + this.tuitionDue();
     }
 
     @Override
@@ -47,7 +47,7 @@ public class Outstate extends Student {
 
     public static void main(String[] args) {
 
-        Outstate student = new Outstate("John", "White", 12, true);
+        Outstate student = new Outstate("John", "White", 17, true);
 
         System.out.println(student.toString());
 

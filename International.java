@@ -12,7 +12,7 @@ public class International extends Student {
 
     @Override
     public String toString() {
-        return super.toString() + " " + "$" + this.tuitionDue();
+        return super.toString() + " tuition due: " + "$" + this.tuitionDue();
     }
 
     @Override
