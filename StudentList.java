@@ -63,17 +63,4 @@ public class StudentList {
             System.out.println(students[i].toString());
         }
     }
-
-    public static void main(String[] args) {
-        StudentList list = new StudentList();
-        list.add(new Instate("Wilson", "Long", 8, 1000));
-        list.add(new Outstate("May", "Anderson", 17, false));
-        list.add(new Outstate("Lauren", "Brown", 17, true));
-        list.add(new International("David", "Lee", 12, false));
-        list.add(new Outstate("Good", "Man", 12, false));
-
-        // System.out.println(new Outstate("May", "Anderson", 17, false).toString());
-
-        list.print();
-    }
 }
