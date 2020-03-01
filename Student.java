@@ -1,5 +1,8 @@
-
 /**
+ * This is an abstract class which includes an abstract method called tuition
+ * due that its subclasses inherit. This class also includes the compareto
+ * method in order to compare the first name and the last name of a student.
+ * 
  * @author Shivam Patel
  * @author Kevin Shah
  */
@@ -15,6 +18,14 @@ public abstract class Student implements Comparable<Object> {
 	public static final int UniversityFee_FullTime = 1441;
 	public static final int International_Student_Fee = 350;
 
+	/**
+	 * This constuctor initializes the first name, last name, and the number of
+	 * credits for all subclasses to inherit.
+	 * 
+	 * @param fname
+	 * @param lname
+	 * @param credit
+	 */
 	public Student(String fname, String lname, int credit) { // constructor
 		this.fname = fname;
 		this.lname = lname;
@@ -29,6 +40,10 @@ public abstract class Student implements Comparable<Object> {
 	// Hint: use the .equals and compareToIgnoreCase methods of the String class to
 	// compare fname
 	// and lname; names are not case-sensitive
+	/**
+	 * The compareTo method checks whether the first name and the last name of the
+	 * student match in the list and returns 0 if the names do match.
+	 */
 	public int compareTo(Object obj) {
 		Student student = (Student) obj;
 		if (this.fname.equalsIgnoreCase(student.fname) && this.lname.equalsIgnoreCase(student.lname)) {
@@ -48,12 +63,23 @@ public abstract class Student implements Comparable<Object> {
 
 	// return a string with fname, lname and credit hours; subclasses will be using
 	// this method.
+	/**
+	 * This method returns the string of the first name, last name, and the number
+	 * of credits student is taking.
+	 */
 	public String toString() {
 		return this.fname + " " + this.lname + " " + this.credit;
 	}
 
 	// compute the tuition due; concrete implementation is required in the
 	// subclasses.
+	/**
+	 * This is the abstract method and computes the tuition amount by the subclasses
+	 * in order to compute the tuition amounts by the respective subclasses of
+	 * instate, outstate, and international.
+	 * 
+	 * @return
+	 */
 	public abstract int tuitionDue();
 
 }
