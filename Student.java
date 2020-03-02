@@ -11,12 +11,12 @@ public abstract class Student implements Comparable<Object> {
 	private String lname;
 	protected int credit;
 
-	public static final int Instate_PerCost = 433;
-	public static final int Outstate_PerCost = 756;
-	public static final int International_PerCost = 945;
-	public static final int UniversityFee_PartTime = 846;
-	public static final int UniversityFee_FullTime = 1441;
-	public static final int International_Student_Fee = 350;
+	public static final int INSTATE_PERCOST = 433;
+	public static final int OUTSTATE_PERCOST = 756;
+	public static final int INTERNATIONAL_PERCOST = 945;
+	public static final int UNIVERSITYFEE_PARTTIME = 846;
+	public static final int UNIVERSITYFEE_FULLTIME = 1441;
+	public static final int INTERNATIONAL_STUDENT_FEE = 350;
 
 	/**
 	 * This constuctor initializes the first name, last name, and the number of
