@@ -42,25 +42,25 @@ public class International extends Student {
 
         if (this.credit < 12) {
             if (this.exchange == true) {
-                tuition = Student.UniversityFee_PartTime + Student.International_Student_Fee;
+                tuition = Student.UNIVERSITYFEE_PARTTIME + Student.INTERNATIONAL_STUDENT_FEE;
             } else if (this.exchange == false) {
-                tuition = (Student.International_PerCost * this.credit) + Student.UniversityFee_PartTime
-                        + Student.International_Student_Fee;
+                tuition = (Student.INTERNATIONAL_PERCOST * this.credit) + Student.UNIVERSITYFEE_PARTTIME
+                        + Student.INTERNATIONAL_STUDENT_FEE;
             }
         } else if (this.credit >= 12) {
             if (this.credit >= 15) {
                 if (this.exchange == true) {
-                    tuition = Student.UniversityFee_FullTime + Student.International_Student_Fee;
+                    tuition = Student.UNIVERSITYFEE_FULLTIME + Student.INTERNATIONAL_STUDENT_FEE;
                 } else if (this.exchange == false) {
-                    tuition = (Student.International_PerCost * 15) + Student.UniversityFee_FullTime
-                            + Student.International_Student_Fee;
+                    tuition = (Student.INTERNATIONAL_PERCOST * 15) + Student.UNIVERSITYFEE_FULLTIME
+                            + Student.INTERNATIONAL_STUDENT_FEE;
                 }
             } else {
                 if (this.exchange == true) {
-                    tuition = Student.UniversityFee_FullTime + Student.International_Student_Fee;
+                    tuition = Student.UNIVERSITYFEE_FULLTIME + Student.INTERNATIONAL_STUDENT_FEE;
                 } else if (this.exchange == false) {
-                    tuition = (Student.International_PerCost * this.credit) + Student.UniversityFee_FullTime
-                            + Student.International_Student_Fee;
+                    tuition = (Student.INTERNATIONAL_PERCOST * this.credit) + Student.UNIVERSITYFEE_FULLTIME
+                            + Student.INTERNATIONAL_STUDENT_FEE;
                 }
             }
         }
