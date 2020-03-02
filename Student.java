@@ -22,9 +22,9 @@ public abstract class Student implements Comparable<Object> {
 	 * This constuctor initializes the first name, last name, and the number of
 	 * credits for all subclasses to inherit.
 	 * 
-	 * @param fname
-	 * @param lname
-	 * @param credit
+	 * @param fname  is first name of the student.
+	 * @param lname  is last name of the student.
+	 * @param credit is number of credits student decides to take.
 	 */
 	public Student(String fname, String lname, int credit) { // constructor
 		this.fname = fname;
@@ -78,7 +78,8 @@ public abstract class Student implements Comparable<Object> {
 	 * in order to compute the tuition amounts by the respective subclasses of
 	 * instate, outstate, and international.
 	 * 
-	 * @return
+	 * @return returns an integer value after subclasses inherit this abstract
+	 *         method.
 	 */
 	public abstract int tuitionDue();
 
