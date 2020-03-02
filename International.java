@@ -13,10 +13,11 @@ public class International extends Student {
      * This constructor initializes the first name, last name, number of credits,
      * and exchange variable.
      * 
-     * @param fname
-     * @param lname
-     * @param credit
-     * @param exchange
+     * @param fname    is the first name.
+     * @param lname    is the last name.
+     * @param credit   is the number of credits the student is taking.
+     * @param exchange is the status of whether international student is an exchange
+     *                 student or not.
      */
     public International(String fname, String lname, int credit, boolean exchange) {
         super(fname, lname, credit);
@@ -72,7 +73,7 @@ public class International extends Student {
      * This testbed main method tests all of the constructors and all of the methods
      * of the class.
      * 
-     * @param args
+     * @param args is the main argument of the testbed method.
      */
     public static void main(String[] args) {
 
@@ -94,3 +95,4 @@ public class International extends Student {
     }
 
 }
+
