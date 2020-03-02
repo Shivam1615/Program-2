@@ -14,10 +14,11 @@ public class Instate extends Student {
      * Constructor initializes the first name, last name, credits, and the amound of
      * funds for a student.
      * 
-     * @param fname
-     * @param lname
-     * @param credit
-     * @param funds
+     * @param fname  is the first name of the student.
+     * @param lname  is the last name of the student.
+     * @param credit is the number of credits the student is taking.
+     * @param funds  is the amount of funds a full-time student is eligible to
+     *               recieve.
      */
     public Instate(String fname, String lname, int credit, int funds) {
         super(fname, lname, credit);
@@ -59,7 +60,7 @@ public class Instate extends Student {
      * This main testbed method tests the constructor and the tuitionDue() and the
      * toString method.
      * 
-     * @param args
+     * @param args is the main argument of the testbed main class.
      */
     public static void main(String[] args) {
 
@@ -78,3 +79,4 @@ public class Instate extends Student {
     }
 
 }
+
