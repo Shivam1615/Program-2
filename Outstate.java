@@ -1,3 +1,4 @@
+
 /**
  * This class overrides the toString and the tuitionDue of the Student class to
  * obtain information about an Out of State student.
@@ -12,10 +13,11 @@ public class Outstate extends Student {
      * This constructor initializes the first name, last name, number of credits,
      * and whether student is in the tristate area.
      * 
-     * @param fname
-     * @param lname
-     * @param credit
-     * @param tristate
+     * @param fname    is the first name of the student.
+     * @param lname    is the last name of the student.
+     * @param credit   is the number of credits the student is taking.
+     * @param tristate decides whether the student is in tristate area or not in
+     *                 order to get discount off of the tuition.
      */
     public Outstate(String fname, String lname, int credit, boolean tristate) {
         super(fname, lname, credit);
@@ -68,7 +70,7 @@ public class Outstate extends Student {
      * This testbed main method tests all of the methods and constructor to ensure
      * its correctness.
      * 
-     * @param args
+     * @param args is the main argument of the testbed main class.
      */
     public static void main(String[] args) {
 
