@@ -43,11 +43,11 @@ public class Instate extends Student {
         int tuition = 0;
 
         // Part-time students
-        if (this.credit < 12) {
+        if (this.credit < Student.Twleve) {
             tuition = (Student.INSTATE_PERCOST * this.credit) + Student.UNIVERSITYFEE_PARTTIME;
-        } else if (this.credit >= 12) { // Full-time students
-            if (this.credit >= 15) {
-                tuition = (Student.INSTATE_PERCOST * 15) + Student.UNIVERSITYFEE_FULLTIME - this.funds;
+        } else if (this.credit >= Student.Twleve) { // Full-time students
+            if (this.credit >= Student.Fifteen) {
+                tuition = (Student.INSTATE_PERCOST * Student.Fifteen) + Student.UNIVERSITYFEE_FULLTIME - this.funds;
             } else {
                 tuition = (Student.INSTATE_PERCOST * this.credit) + Student.UNIVERSITYFEE_FULLTIME - this.funds;
             }
@@ -79,4 +79,3 @@ public class Instate extends Student {
     }
 
 }
-
