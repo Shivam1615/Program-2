@@ -41,22 +41,22 @@ public class Outstate extends Student {
     public int tuitionDue() {
         int tuition = 0;
 
-        if (this.credit < 12) {
+        if (this.credit < Student.Twleve) {
             if (this.tristate == true) {
                 tuition = this.credit * (Student.OUTSTATE_PERCOST) + Student.UNIVERSITYFEE_PARTTIME;
             } else if (this.tristate == false) {
                 tuition = (Student.OUTSTATE_PERCOST * this.credit) + Student.UNIVERSITYFEE_PARTTIME;
             }
-        } else if (this.credit >= 12) {
-            if (this.credit >= 15) {
+        } else if (this.credit >= Student.Twleve) {
+            if (this.credit >= Student.Fifteen) {
                 if (this.tristate == true) {
-                    tuition = 15 * (Student.OUTSTATE_PERCOST - 200) + Student.UNIVERSITYFEE_FULLTIME;
+                    tuition = Student.Fifteen * (Student.OUTSTATE_PERCOST - Student.discount) + Student.UNIVERSITYFEE_FULLTIME;
                 } else if (this.tristate == false) {
-                    tuition = (Student.OUTSTATE_PERCOST * 15) + Student.UNIVERSITYFEE_FULLTIME;
+                    tuition = (Student.OUTSTATE_PERCOST * Student.Fifteen) + Student.UNIVERSITYFEE_FULLTIME;
                 }
             } else {
                 if (this.tristate == true) {
-                    tuition = this.credit * (Student.OUTSTATE_PERCOST - 200) + Student.UNIVERSITYFEE_FULLTIME;
+                    tuition = this.credit * (Student.OUTSTATE_PERCOST - Student.discount) + Student.UNIVERSITYFEE_FULLTIME;
                 } else if (this.tristate == false) {
                     tuition = (Student.OUTSTATE_PERCOST * this.credit) + Student.UNIVERSITYFEE_FULLTIME;
                 }
