@@ -43,7 +43,7 @@ public class International extends Student {
 
         if (this.credit < 12) {
             if (this.exchange == true) {
-                tuition = Student.UNIVERSITYFEE_PARTTIME + Student.INTERNATIONAL_STUDENT_FEE;
+                tuition = Student.UNIVERSITYFEE_FULLTIME + Student.INTERNATIONAL_STUDENT_FEE;
             } else if (this.exchange == false) {
                 tuition = (Student.INTERNATIONAL_PERCOST * this.credit) + Student.UNIVERSITYFEE_PARTTIME
                         + Student.INTERNATIONAL_STUDENT_FEE;
@@ -95,4 +95,3 @@ public class International extends Student {
     }
 
 }
-
