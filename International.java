@@ -41,19 +41,19 @@ public class International extends Student {
     public int tuitionDue() {
         int tuition = 0;
 
-        if (this.credit < Student.Twleve) {
+        if (this.credit < Student.TWLEVE) {
             if (this.exchange == true) {
                 tuition = Student.UNIVERSITYFEE_FULLTIME + Student.INTERNATIONAL_STUDENT_FEE;
             } else if (this.exchange == false) {
                 tuition = (Student.INTERNATIONAL_PERCOST * this.credit) + Student.UNIVERSITYFEE_PARTTIME
                         + Student.INTERNATIONAL_STUDENT_FEE;
             }
-        } else if (this.credit >= Student.Twleve) {
-            if (this.credit >= Student.Fifteen) {
+        } else if (this.credit >= Student.TWLEVE) {
+            if (this.credit >= Student.FIFTEEN) {
                 if (this.exchange == true) {
                     tuition = Student.UNIVERSITYFEE_FULLTIME + Student.INTERNATIONAL_STUDENT_FEE;
                 } else if (this.exchange == false) {
-                    tuition = (Student.INTERNATIONAL_PERCOST * Student.Fifteen) + Student.UNIVERSITYFEE_FULLTIME
+                    tuition = (Student.INTERNATIONAL_PERCOST * Student.FIFTEEN) + Student.UNIVERSITYFEE_FULLTIME
                             + Student.INTERNATIONAL_STUDENT_FEE;
                 }
             } else {
@@ -95,3 +95,4 @@ public class International extends Student {
     }
 
 }
+
