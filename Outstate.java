@@ -1,4 +1,3 @@
-
 /**
  * This class overrides the toString and the tuitionDue of the Student class to
  * obtain information about an Out of State student.
@@ -41,22 +40,24 @@ public class Outstate extends Student {
     public int tuitionDue() {
         int tuition = 0;
 
-        if (this.credit < Student.Twleve) {
+        if (this.credit < Student.TWLEVE) {
             if (this.tristate == true) {
                 tuition = this.credit * (Student.OUTSTATE_PERCOST) + Student.UNIVERSITYFEE_PARTTIME;
             } else if (this.tristate == false) {
                 tuition = (Student.OUTSTATE_PERCOST * this.credit) + Student.UNIVERSITYFEE_PARTTIME;
             }
-        } else if (this.credit >= Student.Twleve) {
-            if (this.credit >= Student.Fifteen) {
+        } else if (this.credit >= Student.TWLEVE) {
+            if (this.credit >= Student.FIFTEEN) {
                 if (this.tristate == true) {
-                    tuition = Student.Fifteen * (Student.OUTSTATE_PERCOST - Student.discount) + Student.UNIVERSITYFEE_FULLTIME;
+                    tuition = Student.FIFTEEN * (Student.OUTSTATE_PERCOST - Student.DISCOUNT)
+                            + Student.UNIVERSITYFEE_FULLTIME;
                 } else if (this.tristate == false) {
-                    tuition = (Student.OUTSTATE_PERCOST * Student.Fifteen) + Student.UNIVERSITYFEE_FULLTIME;
+                    tuition = (Student.OUTSTATE_PERCOST * Student.FIFTEEN) + Student.UNIVERSITYFEE_FULLTIME;
                 }
             } else {
                 if (this.tristate == true) {
-                    tuition = this.credit * (Student.OUTSTATE_PERCOST - Student.discount) + Student.UNIVERSITYFEE_FULLTIME;
+                    tuition = this.credit * (Student.OUTSTATE_PERCOST - Student.DISCOUNT)
+                            + Student.UNIVERSITYFEE_FULLTIME;
                 } else if (this.tristate == false) {
                     tuition = (Student.OUTSTATE_PERCOST * this.credit) + Student.UNIVERSITYFEE_FULLTIME;
                 }
