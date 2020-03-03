@@ -1,3 +1,4 @@
+
 /**
  * This is an abstract class which includes an abstract method called tuition
  * due that its subclasses inherit. This class also includes the compareto
@@ -17,9 +18,9 @@ public abstract class Student implements Comparable<Object> {
 	public static final int UNIVERSITYFEE_PARTTIME = 846;
 	public static final int UNIVERSITYFEE_FULLTIME = 1441;
 	public static final int INTERNATIONAL_STUDENT_FEE = 350;
-	public static final int Twleve = 12;
-	public static final int Fifteen = 15;
-	public static final int discount = 200;
+	public static final int TWLEVE = 12;
+	public static final int FIFTEEN = 15;
+	public static final int DISCOUNT = 200;
 
 	/**
 	 * This constuctor initializes the first name, last name, and the number of
